@@ -152,23 +152,24 @@ public class Flash
     // This will be called when an app tries to change flash mode
     static void setFlashMode(final String mode)
     {
-        switch (mode) {
-            case "Camera.Parameters.FLASH_MODE_ON":
-                on();
-                break;
+        switch (mode)
+		{
+			case Camera.Parameters.FLASH_MODE_ON:
+				on();
+				break;
 
-            case "Camera.Parameters.FLASH_MODE_OFF":
-                off();
-                break;
+			case Camera.Parameters.FLASH_MODE_OFF:
+				off();
+				break;
 
-            case "Camera.Parameters.FLASH_MODE_AUTO":
-                off();
-                break;
+			case Camera.Parameters.FLASH_MODE_AUTO:
+				off();
+				break;
 
-            case "Camera.Parameters.FLASH_MODE_TORCH":
-                on();
-                break;
-        }
+			case Camera.Parameters.FLASH_MODE_TORCH:
+				on();
+				break;
+		}
 
         // Let's do this to keep track of current flash mode set by app
         sFlashMode = mode;
